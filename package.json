@@ -10,7 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "xstate": "^4.38.3"
+    "@xstate/graph": "^3.0.4",
+    "xstate": "^5.20.2"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

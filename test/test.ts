@@ -1,11 +1,11 @@
-import { MyApp } from "../src/index"
+import { toggleModel } from "./machine";
 
-beforeEach(() => {
-    const t = new MyApp();
+const plans = toggleModel.getSimplePaths();
+
+describe("xstate tests", () => {  
+  plans.forEach((plan) => {
+    it(plan.description, async () => {
+        await plan.test({});
+    });
+  });
 })
-
-describe("first test", () => {
-    it("is not failing", () => {
-        expect(1).toBe(1);
-    })
-}) 
