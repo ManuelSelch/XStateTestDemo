@@ -2,8 +2,6 @@ import { demoModel } from "./machine";
 
 const plans = demoModel.getSimplePaths();
 
-
-
 describe("demo", () => {  
   plans.forEach((plan) => {
     it(plan.description, async () => {
