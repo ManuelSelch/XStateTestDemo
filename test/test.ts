@@ -1,12 +1,14 @@
-import { toggleModel } from "./machine";
+import { demoModel } from "./machine";
 
-const plans = toggleModel.getSimplePaths();
+const plans = demoModel.getSimplePaths();
 
-var myValue = 0;
 
-describe("xstate tests", () => {  
+
+describe("demo", () => {  
   plans.forEach((plan) => {
     it(plan.description, async () => {
+      var myValue = 0;
+      
       await plan.test({
         states: {
           start: () => expect(myValue).toBe(0),
@@ -14,7 +16,8 @@ describe("xstate tests", () => {
           end: () => expect(myValue).toBe(2)
         },
         events: {
-          click: () => { myValue++ }
+          click: () => { myValue++ },
+          exit: () => { myValue+=2 }
         }
       });
     });
