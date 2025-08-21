@@ -15,3 +15,7 @@ npm i
 npm start
 npm test
 ```
+
+## Showcase
+- little demo how the system looks like
+![Showcase](./doc/showcase.png)
